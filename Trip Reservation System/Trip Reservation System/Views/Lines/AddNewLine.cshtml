@@ -1,0 +1,40 @@
+﻿@model Trip_Reservation_System.ViewModels.Lines
+
+@{
+    ViewBag.Title = "AddNewLine";
+}
+
+<h2>AddNewLine</h2>
+
+
+@using (Html.BeginForm())
+{
+
+    <div class="form-group">
+
+        @Html.LabelFor(x => x.line.Name)
+        @Html.TextBoxFor(x => x.line.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.line.Name)
+
+    </div>
+    <div class="form-group">
+
+        @Html.LabelFor(x => x.line.Price)
+        @Html.TextBoxFor(x => x.line.Price, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.line.Price)
+
+    </div>
+    <div>
+        @Html.LabelFor(x => x.line.LocFrom)
+        @Html.DropDownListFor(x => x.line.LocFrom, new SelectList(Model.lines, "LocFrom", "LocFrom"), "Select the start city", new { @class = "form-control" })
+    </div>
+
+
+    <div>
+        @Html.LabelFor(x => x.line.LocTo)
+        @Html.DropDownListFor(x => x.line.LocTo, new SelectList(Model.lines, "LocTo", "LocTo"), "Select the End city", new { @class = "form-control" })
+    </div>
+
+
+<button class="btn btn-success" type="submit">Save</button> 
+}

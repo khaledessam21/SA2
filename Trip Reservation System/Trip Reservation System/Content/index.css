@@ -1,0 +1,261 @@
+body{
+    
+    font-family: lucida sans;
+    margin:0;
+    padding:0;
+}
+
+
+header{
+    
+    border:1px solid #000;
+    position: fixed;
+    z-index:9999;
+    width:100%;
+    background-color:#fff; 
+}
+.header-list {
+    
+    display:flex;
+    justify-content: space-around;
+        
+}
+
+.header-list .list{
+padding:28px 0;    
+}
+
+.header-list .list a{
+    
+    text-decoration: none;
+}
+.header-list .list a:hover{
+    
+    color:#7cb62f;
+}
+
+
+@media  (max-width:575px)
+{
+    .header-list .list{
+        
+        display:block;
+        text-align:center;
+    }
+    
+}
+
+header h3{display: inline;}
+.logo-header{margin-top:20px;}
+.carousel-caption{padding-bottom: 35px;margin-bottom:320px;}
+
+.carousel-inner{height: 800px;}
+.home{
+    
+    background-image: url("../img/f1b4d8b97c237d3d03da0c5c32fa416b.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    color:#fff;
+    margin-top:25px;
+    min-height:500px;
+}
+.home .container{
+    
+    padding-top: 120px;
+}
+.home .overlay{
+    
+    min-height: 500px;
+    background: rgba(0,0,0,0.6);
+} 
+
+.home button {
+    background-color:#7cb62f; 
+    color:#fff; 
+    width:140px;
+    height: 50px;
+    margin:5px;
+    
+}
+.home button:hover{
+    color;#000;
+    
+}
+.services{
+    
+    background: #DDD;
+    
+}
+.services-info{
+    
+    background-color: #FFF;
+    min-height: 200px;
+    padding:70px;
+    margin:10px;
+   
+}
+
+.services-info:hover{
+    
+    background-color:#7cb62f; 
+    color:#fff;
+}
+
+.about{
+    
+    margin:10px;
+}
+
+.offers{
+    background-color: #EEE;
+    padding-bottom: 30px;
+    min-height:550px;
+    
+}
+
+.offers .offers-info{
+    
+    background-color: #fff;
+    padding:50px;
+    
+}
+
+.offers-info .p2 h3{
+    border-radius:50%;
+    
+    background-color: #EEE;
+}
+.skills{
+    
+    background-color: #DDD;
+    padding:20px;
+    margin-top:20px;
+}
+
+.features {
+    
+    background-color: #EEE;
+    padding:40px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+
+
+.our-team{
+    margin-top:15px;
+    background-color: #DDD;
+    padding: 20px;
+    
+}
+.our-team .person {
+    
+    margin:10px;
+}
+.stat{
+    
+    background-color: #EEE;
+    margin:10px 0;
+    padding:20px;
+}
+@media Screen and (max-width:400px) {
+    .about{
+        margin-top:500px;
+
+    }
+}
+.contact-body{
+    
+  background:rgba(2,2,2,0.8);
+    color:white;
+    margin:10px 0;
+}
+.contact-body button {
+    
+    height: 50px;
+}
+.contact-body input[type='text']{
+    
+    background: rgba(8,8,8,0.7);
+    color:#fff;
+    border:0;
+    
+}
+.contact-body textarea{
+     background: rgba(8,8,8,0.7);
+    color:#fff;
+    border:0;
+    
+}
+.button-top{
+    
+    z-index:99999999;
+    float:right;
+    cursor: pointer;
+    margin-right:20px;
+    margin-bottom:10px;
+    color:white;
+    background-color: #7cb62f; 
+    
+    margin-top:-55px;
+}
+
+.button-top:hover{
+    
+    background-color: darkgreen;
+}
+
+.login-register{
+    
+    margin-top:20px;
+    
+}
+.skills .progress{
+    
+    height:36px;
+   
+}
+
+.skills .progress-bar{
+    
+    line-height:36px;
+    font-size:15px;
+    text-align: left;
+    text-indent:10px;
+    
+    
+}
+
+.footer{
+    
+    background-color:rgba(2,2,2,0.8);
+    color:#fff;
+   min-height:600px;
+    
+}
+.footer .three-columns li{
+    width:33.3333%;
+    float:left;
+    padding:5px;
+    
+    
+}
+.footer .accounts ul li i{
+    
+    float:left;
+    
+    
+}
+.footer .copyright{
+    
+   padding-top:120px;
+    
+}
+.footer .accounts-list li{
+    
+    float:left;
+    padding:20px;
+}
+
+
+

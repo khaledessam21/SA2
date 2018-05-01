@@ -1,0 +1,76 @@
+﻿@model Trip_Reservation_System.ViewModels.BusLineViewModel
+@{
+    ViewBag.Title = "AddBus";
+}
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<h2>Add Bus</h2>
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(x => x.Bus.DriverName)
+        @Html.TextBoxFor(x => x.Bus.DriverName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Bus.DriverName)
+
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Bus.NumberOfSeats)
+        @Html.TextBoxFor(x => x.Bus.NumberOfSeats, new { @class = "form-control", Type = "number", min = "20", max = "40" })
+        @Html.ValidationMessageFor(x => x.Bus.NumberOfSeats)
+
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Bus.TimeFrom)
+        @Html.TextBoxFor(x => x.Bus.TimeFrom, new { @class = "form-control", Type = "time", Id = "TimeFrom" })
+        @Html.ValidationMessageFor(x => x.Bus.TimeFrom)
+
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Bus.TimeTo)
+        @Html.TextBoxFor(x => x.Bus.TimeTo, new { @class = "form-control", Type = "time", Id = "TimeTo" })
+        @Html.ValidationMessageFor(x => x.Bus.TimeTo)
+
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Bus.LineId)
+        @Html.DropDownListFor(x => x.Bus.LineId, new SelectList(Model.Lines, "Id", "Name"), "Select Line", new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Bus.LineId)
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Bus.Day)
+        @Html.DropDownListFor(x => x.Bus.Day, new SelectList(Model.Days, "DayNumber", "Name"), "Select Line", new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Bus.Day)
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Bus.BusTypeId)
+        @Html.DropDownListFor(x => x.Bus.BusTypeId, new SelectList(Model.BusTypes, "Id", "Name"), "Select Type", new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Bus.BusTypeId)
+
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+
+
+@*<script type="text/javascript">
+        $(function () {
+            $('#TimeFrom').datepicker();
+        })
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $('#TimeTo').datepicker();
+        })
+    </script>*@
+

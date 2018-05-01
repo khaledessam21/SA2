@@ -9,18 +9,28 @@ namespace Trip_Reservation_System.Models
     public class Passenger
     {
         public int Id { get; set; }
+
+
         [Required(ErrorMessage = "you have to enter your name")]
         [StringLength(20)]
-        //[Display(Name = "New password")]
+        [Display(Name = "New password")]
         public string Name { get; set; }
+
+
         [Required(ErrorMessage = "you have to enter your Username")]
         [StringLength(20)]
         public string UserName { get; set; }
+
+
+
         [Required(ErrorMessage = "you have to enter your Password")]
         [DataType(DataType.Password)]
         [MinLength(5)]
         [StringLength(10)]
         public string Password { get; set; }
+
+
+
         [Compare("Password", ErrorMessage = "you have to enter your confirm Password")]
         [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }
@@ -38,8 +48,9 @@ namespace Trip_Reservation_System.Models
 
         public long SSN { get; set; }
         [Required(ErrorMessage = "you have to enter your Gender")]
-        public string Gender { get; set; }
 
+
+        public string Gender { get; set; }
         public float Wallet { get; set; }
         public bool Block { get; set; }
         public bool IsAdmin { get; set; }

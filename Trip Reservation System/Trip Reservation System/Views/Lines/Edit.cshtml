@@ -1,0 +1,36 @@
+﻿@model Trip_Reservation_System.ViewModels.Lines
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Update Line</h2>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(c => c.line.Id)
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.line.Name)
+        @Html.TextBoxFor(m => m.line.Name, new { @class = "form-control",@Type="String" })
+        @Html.ValidationMessageFor(x => x.line.Name)
+    </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.line.Price)
+            @Html.TextBoxFor(m => m.line.Price, new { @class = "form-control", @Type = "number" })
+            @Html.ValidationMessageFor(x => x.line.Price)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.line.LocFrom)
+            @Html.DropDownListFor(m => m.line.LocFrom, new SelectList(Model.lines, "LocFrom", "LocFrom"), "Select Membership", new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.line.LocFrom)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.line.LocTo)
+            @Html.DropDownListFor(m => m.line.LocTo, new SelectList(Model.lines, "LocTo", "LocTo"), "Select Membership", new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.line.LocTo)
+        </div>
+
+
+    <button type="submit" class="btn btn-danger">Edit</button>
+    <button class="btn btn-danger">Back</button>
+}

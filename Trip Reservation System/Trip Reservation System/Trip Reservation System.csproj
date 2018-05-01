@@ -196,7 +196,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\BusController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LinesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PassengerController.cs" />
     <Compile Include="Global.asax.cs">
@@ -221,6 +224,8 @@
     <Compile Include="Models\Trip.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\BusLineViewModel.cs" />
+    <Compile Include="ViewModels\Lines.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -261,7 +266,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -282,11 +286,26 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Passenger\Register.cshtml" />
     <Content Include="Views\Passenger\Login.cshtml" />
     <Content Include="Views\Passenger\LoggedIn.cshtml" />
     <Content Include="Views\Passenger\AdminPanel.cshtml" />
     <Content Include="Views\Passenger\CancelReservation.cshtml" />
+=======
+    <Content Include="Views\Lines\Index.cshtml" />
+    <Content Include="Views\Lines\AddNewLine.cshtml" />
+    <Content Include="Views\Lines\Details.cshtml" />
+    <Content Include="Views\Lines\Edit.cshtml" />
+    <Content Include="Views\Home\Master.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Admin_Edit_Passenger.cshtml" />
+    <Content Include="Views\Bus\Index.cshtml" />
+    <Content Include="Views\Bus\Details.cshtml" />
+    <Content Include="Views\Bus\AddBus.cshtml" />
+    <Content Include="Views\Bus\Edit.cshtml" />
+>>>>>>> d9a85419bbeece97e208af0b4169ce80fecb29b1
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
