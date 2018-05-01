@@ -1,0 +1,86 @@
+﻿@model Trip_Reservation_System.ViewModels.BusLineViewModel
+
+@{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div>
+    <h4>Bus</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bus.DriverName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bus.DriverName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bus.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bus.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Line.Name)
+
+
+        </dt>
+
+
+        <dd>
+            @Html.DisplayFor(model => model.Line.Name)
+
+
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bus.NumberOfSeats)
+
+
+        </dt>
+
+
+        <dd>
+            @Html.DisplayFor(model => model.Bus.NumberOfSeats)
+
+
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bus.TimeFrom)
+
+
+        </dt>
+
+
+        <dd>
+            @Html.DisplayFor(model => model.Bus.TimeFrom)
+
+
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bus.TimeTo)
+
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bus.TimeTo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bus.Day)
+
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bus.Day)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Bus.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+

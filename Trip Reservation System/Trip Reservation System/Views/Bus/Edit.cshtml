@@ -1,0 +1,36 @@
+﻿@model Trip_Reservation_System.ViewModels.BusLineViewModel
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Edit Customer</h2>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(c => c.Bus.Id)
+    <div class="form-group">
+
+        @Html.LabelFor(x => x.Bus.DriverName)
+        @Html.TextBoxFor(m => m.Bus.DriverName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Bus.DriverName)
+
+        @Html.LabelFor(x => x.Bus.LineId)
+        @Html.DropDownListFor(m => m.Bus.LineId, new SelectList(Model.Lines, "Id", "Name"), "Select Line", new { @class = "form-control", type = "number" })
+        @Html.ValidationMessageFor(x => x.Bus.LineId)
+
+        @Html.LabelFor(x => x.Bus.NumberOfSeats)
+        @Html.TextBoxFor(m => m.Bus.NumberOfSeats, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Bus.NumberOfSeats)
+
+        @Html.LabelFor(x => x.Bus.TimeFrom)
+        @Html.TextBoxFor(m => m.Bus.TimeFrom, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Bus.TimeFrom)
+
+        @Html.LabelFor(x => x.Bus.TimeTo)
+        @Html.TextBoxFor(m => m.Bus.TimeTo, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Bus.TimeTo)
+
+    </div>
+
+    <button type="submit" class="btn btn-danger">Edit</button>
+}

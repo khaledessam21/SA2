@@ -1,0 +1,74 @@
+﻿@model Trip_Reservation_System.Models.Passenger
+
+@{
+    ViewBag.Title = "Admin_Edit_Passenger";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Admin_Edit_Passenger</h2>
+<table class="table">
+    <tr>
+        <th>
+            Name
+         
+        </th>
+        <th>
+            Adress
+        </th>
+        <th>
+            Date of Birth
+        </th>
+        <th>
+            SSN
+        </th>
+        <th>
+            Gender
+        </th>
+        <th>
+            Block
+        </th>
+        <th>
+            Wallet
+        </th>
+        <th>
+
+        </th>
+    </tr>
+    <tr>
+        <td>
+            @Model.Name
+        </td>
+        <td>
+            @Model.Adress
+        </td>
+        <td>
+            @Model.DateOfBirth
+        </td>
+        <td>
+            @Model.SSN
+        </td>
+        <td>
+            @Model.Gender
+        </td>
+        <td>
+            @Model.Block
+        </td>
+        @using (Html.BeginForm())
+        {
+            <td>
+                @Html.TextBoxFor(m => m.Wallet, new { type = "number", min = "0", autocomplete="off" })
+
+            </td>
+            <td>
+
+                @Html.HiddenFor(c => c.Id)
+
+
+                <button type="submit" class="btn btn-primary">save</button>
+
+
+            </td>
+        }
+    </tr>
+
+</table>
