@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "AdminPanel";
+}
+
+<h2>AdminPanel</h2>
+@if (Session["AdminId"] != null)
+{
+    <h4>hello @Session["AdminId"].ToString()</h4>
+    @Html.ActionLink("add line", "addLine", "Passenger")
+    @Html.ActionLink("Logout", "Logout", "Passenger")
+}

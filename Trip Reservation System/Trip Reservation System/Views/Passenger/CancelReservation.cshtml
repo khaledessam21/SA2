@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Trip_Reservation_System.Models.Ticket>
+
+@{
+    ViewBag.Title = "CancelReservation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cancel Reservation</h2>
+
+
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.ReservationDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocFrom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocTo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeFrom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeTo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfseats)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.ReservationDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocFrom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BusId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeFrom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfseats)
+            </td>
+            <td>
+                <!-- --> @Html.ActionLink("Cancel", "Cancel", new
+                    {
+                        NumberOfseats = item.NumberOfseats,
+                        date = item.ReservationDay,
+                        BusID = item.BusId,
+                        UserId = item.PassengerId,
+                        TotalPrice = item.TotalPrice
+                    })
+            </td>
+        </tr>
+    }
+
+</table>

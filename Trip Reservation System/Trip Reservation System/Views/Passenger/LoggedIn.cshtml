@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "LoggedIn";
+}
+
+@if (Session["PassengerId"] != null)
+{
+    <h4>hello @Session["UserName"].ToString()</h4>
+    @Html.ActionLink("Book Ticket", "Logout", "Passenger")
+    @Html.ActionLink("Cancel Ticket", "CancelReservation", new { id = Convert.ToInt32(Session["PassengerID"]) })
+    @Html.ActionLink("Logout", "Logout", "Passenger")
+}
+
